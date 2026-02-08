@@ -6,11 +6,10 @@ import { motion } from 'framer-motion'
 import dynamic from 'next/dynamic'
 import Section from '@/components/Section'
 import Card from '@/components/Card'
-import { services, processSteps, categories } from '@/lib/siteData'
 import MarqueeLogos from '@/components/MarqueeLogos'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Globe2 } from 'lucide-react'
 import IconRenderer from '@/components/IconRenderer'
-import { useI18n } from '@/lib/i18n'
+import { useI18n, serviceI18nKeys, processI18nKeys, categoryI18nKeys } from '@/lib/i18n'
 
 // 3D Hero - lazy load
 const Hero3D = dynamic(() => import('@/components/Hero3D'), {
@@ -229,14 +228,14 @@ export default function Home() {
       {/* Hizmetler */}
       <Section title={t('section.services')} subtitle={t('section.servicesSubtitle')}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, index) => (
-            <Card key={service.id} delay={index * 0.1}>
+          {serviceI18nKeys.map((service, index) => (
+            <Card key={index} delay={index * 0.1}>
               <div className="text-center">
                 <div className="flex justify-center mb-4">
                   <IconRenderer name={service.icon} size={48} className="text-cyan-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
-                <p className="text-gray-400 text-sm">{service.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-2">{t(service.titleKey)}</h3>
+                <p className="text-gray-400 text-sm">{t(service.descKey)}</p>
               </div>
             </Card>
           ))}
@@ -250,9 +249,9 @@ export default function Home() {
         className="bg-gradient-to-b from-transparent to-background/30"
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          {processSteps.slice(0, 3).map((step, index) => (
+          {processI18nKeys.slice(0, 3).map((step, index) => (
             <motion.div
-              key={step.id}
+              key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
@@ -264,8 +263,8 @@ export default function Home() {
                 <div className="mb-4">
                   <IconRenderer name={step.icon} size={40} className="text-cyan-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
-                <p className="text-gray-400 text-sm">{step.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-2">{t(step.titleKey)}</h3>
+                <p className="text-gray-400 text-sm">{t(step.descKey)}</p>
               </div>
             </motion.div>
           ))}
@@ -284,9 +283,9 @@ export default function Home() {
       {/* Neler Yapıyoruz */}
       <Section title={t('section.whatWeDo')} subtitle={t('section.whatWeDoSubtitle')}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {categories.map((category, index) => (
+          {categoryI18nKeys.map((cat, index) => (
             <motion.div
-              key={category.id}
+              key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
@@ -295,9 +294,9 @@ export default function Home() {
             >
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary-dark/10 opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="relative z-10">
-                <h3 className="text-xl font-semibold text-white mb-2">{category.title}</h3>
-                <p className="text-sm text-primary mb-3">{category.subtitle}</p>
-                <p className="text-gray-400 text-sm mb-4 line-clamp-2">{category.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-2">{t(cat.titleKey)}</h3>
+                <p className="text-sm text-primary mb-3">{t(cat.subtitleKey)}</p>
+                <p className="text-gray-400 text-sm mb-4 line-clamp-2">{t(cat.descKey)}</p>
                 <Link
                   href="/neler-yapiyoruz"
                   className="inline-flex items-center gap-2 text-sm text-primary hover:gap-3 transition-all"
@@ -309,6 +308,54 @@ export default function Home() {
             </motion.div>
           ))}
         </div>
+      </Section>
+
+      {/* Uluslararası Deneyim */}
+      <Section>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="relative glass-enhanced rounded-2xl p-8 md:p-12 overflow-hidden border border-cyan-500/20"
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-cyan-500/5" />
+          <div className="absolute -top-10 -right-10 w-40 h-40 bg-cyan-500/10 rounded-full blur-3xl" />
+          <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-purple-500/10 rounded-full blur-3xl" />
+          
+          <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 md:gap-10">
+            <div className="flex items-center gap-4">
+              <div className="p-4 glass rounded-xl bg-cyan-500/10">
+                <Globe2 size={36} className="text-cyan-400" />
+              </div>
+            </div>
+            <div className="text-center md:text-left flex-1">
+              <h3 className="text-2xl md:text-3xl font-heading font-bold text-white mb-2">
+                {t('international.title')}
+              </h3>
+              <p className="text-gray-400 text-base md:text-lg max-w-2xl">
+                {t('international.desc')}
+              </p>
+            </div>
+            <div className="flex items-center gap-3 flex-shrink-0">
+              <div className="flex flex-col items-center gap-1.5 px-5 py-3 glass rounded-xl border border-white/5">
+                <div className="w-8 h-5 rounded-sm overflow-hidden flex flex-col">
+                  <div className="flex-1 bg-black" />
+                  <div className="flex-1 bg-red-600" />
+                  <div className="flex-1 bg-yellow-500" />
+                </div>
+                <span className="text-xs text-gray-400 font-medium">Germany</span>
+              </div>
+              <div className="flex flex-col items-center gap-1.5 px-5 py-3 glass rounded-xl border border-white/5">
+                <div className="w-8 h-5 rounded-sm overflow-hidden flex flex-col">
+                  <div className="flex-1 bg-red-600" />
+                  <div className="flex-1 bg-white" />
+                  <div className="flex-1 bg-blue-700" />
+                </div>
+                <span className="text-xs text-gray-400 font-medium">Netherlands</span>
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </Section>
 
       {/* Referanslar */}

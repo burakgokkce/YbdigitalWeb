@@ -1,10 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Link from 'next/link'
 import Section from '@/components/Section'
-import { categories } from '@/lib/siteData'
-import { useI18n } from '@/lib/i18n'
+import { useI18n, categoryI18nKeys } from '@/lib/i18n'
 
 export default function NelerYapiyoruz() {
   const { t } = useI18n()
@@ -26,9 +24,9 @@ export default function NelerYapiyoruz() {
         </motion.div>
 
         <div className="space-y-24">
-          {categories.map((category, index) => (
+          {categoryI18nKeys.map((cat, index) => (
             <motion.div
-              key={category.id}
+              key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-100px' }}
@@ -39,16 +37,16 @@ export default function NelerYapiyoruz() {
             >
               <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
                 <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-white">
-                  {category.title}
+                  {t(cat.titleKey)}
                 </h2>
-                <p className="text-primary font-medium mb-4">{category.subtitle}</p>
+                <p className="text-primary font-medium mb-4">{t(cat.subtitleKey)}</p>
                 <p className="text-gray-400 leading-relaxed mb-6">
-                  {category.description}
+                  {t(cat.descKey)}
                 </p>
               </div>
 
               <div className={`grid grid-cols-1 gap-4 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                {category.features.map((feature, featureIndex) => (
+                {cat.features.map((feature, featureIndex) => (
                   <motion.div
                     key={featureIndex}
                     initial={{ opacity: 0, x: index % 2 === 1 ? 30 : -30 }}
@@ -58,9 +56,9 @@ export default function NelerYapiyoruz() {
                     className="glass rounded-xl p-6 glow-hover"
                   >
                     <h3 className="text-lg font-semibold text-white mb-2">
-                      {feature.title}
+                      {t(feature.titleKey)}
                     </h3>
-                    <p className="text-gray-400 text-sm">{feature.desc}</p>
+                    <p className="text-gray-400 text-sm">{t(feature.descKey)}</p>
                   </motion.div>
                 ))}
               </div>

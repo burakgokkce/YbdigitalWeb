@@ -30,35 +30,40 @@ export default function Navbar() {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'glass-enhanced py-3 shadow-lg backdrop-blur-xl'
-          : 'bg-transparent py-5'
+          ? 'glass-enhanced py-4 shadow-lg backdrop-blur-xl'
+          : 'bg-transparent py-6'
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center group">
+          <Link href="/" className="flex items-center group relative">
             <motion.div
-              whileHover={{ scale: 1.03 }}
-              transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 14 }}
               className="flex items-center gap-3 relative"
             >
-              {/* Logo glow effect */}
-              <div className="absolute -inset-2 bg-cyan-500/10 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="relative w-12 h-12 md:w-14 md:h-14 flex-shrink-0">
+              {/* Glow */}
+              <motion.div
+                animate={{ opacity: [0.3, 0.55, 0.3] }}
+                transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+                className="absolute left-[30px] top-1/2 -translate-y-1/2 w-24 h-24 bg-cyan-500/15 rounded-full blur-xl pointer-events-none"
+              />
+              {/* Logo — 150px, navbar büyütüldü */}
+              <div className="relative w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[150px] md:h-[150px] flex-shrink-0 -my-6 sm:-my-8 md:-my-12">
                 <Image
                   src="/images/yb-digital-logo.png"
                   alt="YB Digital Logo"
                   fill
-                  className="object-contain rounded-lg"
+                  className="object-contain drop-shadow-[0_0_14px_rgba(0,212,255,0.35)]"
                   priority
                 />
               </div>
               <div className="relative flex flex-col">
-                <span className="text-lg md:text-xl font-heading font-bold leading-tight bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
+                <span className="text-xl sm:text-2xl md:text-[28px] font-heading font-bold leading-tight bg-gradient-to-r from-white via-cyan-200 to-cyan-400 bg-clip-text text-transparent">
                   YB Digital
                 </span>
-                <span className="text-[10px] md:text-[11px] text-cyan-400/60 font-medium tracking-[0.2em] uppercase leading-tight">
+                <span className="text-[10px] sm:text-[11px] md:text-xs text-cyan-400/80 font-medium tracking-[0.2em] uppercase leading-tight">
                   Software Agency
                 </span>
               </div>

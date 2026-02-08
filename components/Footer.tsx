@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Instagram, Linkedin, Mail, Phone } from 'lucide-react'
 import WhatsAppIcon from '@/components/WhatsAppIcon'
-import { navLinks, socialLinks, contactInfo, companyDescription } from '@/lib/siteData'
+import { navLinks, socialLinks, contactInfo } from '@/lib/siteData'
 import { useI18n, navTranslationKeys } from '@/lib/i18n'
 
 export default function Footer() {
@@ -30,7 +30,7 @@ export default function Footer() {
             </div>
             <p className="text-lg text-gray-300 mb-2 font-medium">{t('slogan')}</p>
             <p className="text-sm text-gray-500 max-w-md leading-relaxed">
-              {companyDescription}
+              {t('company.description')}
             </p>
           </div>
 

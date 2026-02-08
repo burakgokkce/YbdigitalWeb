@@ -1,19 +1,21 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { processSteps } from '@/lib/siteData'
 import IconRenderer from '@/components/IconRenderer'
+import { useI18n, processI18nKeys } from '@/lib/i18n'
 
 export default function Timeline() {
+  const { t } = useI18n()
+
   return (
     <div className="relative">
       {/* Timeline Line */}
       <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-primary-dark to-transparent hidden md:block" />
 
       <div className="space-y-12">
-        {processSteps.map((step, index) => (
+        {processI18nKeys.map((step, index) => (
           <motion.div
-            key={step.id}
+            key={index}
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-50px' }}
@@ -34,13 +36,11 @@ export default function Timeline() {
                   <IconRenderer name={step.icon} size={24} className="text-cyan-400" />
                 </span>
                 <div>
-                  <h3 className="text-xl font-semibold text-white">{step.title}</h3>
-                  {step.duration && (
-                    <span className="text-sm text-primary">{step.duration}</span>
-                  )}
+                  <h3 className="text-xl font-semibold text-white">{t(step.titleKey)}</h3>
+                  <span className="text-sm text-primary">{t(step.durationKey)}</span>
                 </div>
               </div>
-              <p className="text-gray-400">{step.description}</p>
+              <p className="text-gray-400">{t(step.descKey)}</p>
             </div>
           </motion.div>
         ))}

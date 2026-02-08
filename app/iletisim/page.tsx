@@ -48,14 +48,14 @@ export default function Iletisim() {
               </div>
               <div className="text-center sm:text-left flex-1">
                 <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-2">
-                  WhatsApp ile Hızlı İletişim
+                  {t('contact.whatsappTitle')}
                 </h2>
                 <p className="text-gray-400 text-base md:text-lg">
-                  Hemen yazın, anında dönüş yapalım. En hızlı iletişim yolu.
+                  {t('contact.whatsappDesc')}
                 </p>
               </div>
               <div className="flex items-center gap-2 px-6 py-3 bg-green-500 text-white rounded-xl font-semibold text-lg group-hover:bg-green-400 transition-colors shadow-lg shadow-green-500/25">
-                Yazın
+                {t('contact.whatsappBtn')}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </div>
             </div>
