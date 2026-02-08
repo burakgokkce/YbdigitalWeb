@@ -13,7 +13,7 @@ export default function NelerYapiyoruz() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="text-center max-w-3xl mx-auto mb-20"
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
             {t('section.whatWeDo')}
@@ -23,47 +23,61 @@ export default function NelerYapiyoruz() {
           </p>
         </motion.div>
 
-        <div className="space-y-24">
-          {categoryI18nKeys.map((cat, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-100px' }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                index % 2 === 1 ? 'lg:flex-row-reverse' : ''
-              }`}
-            >
-              <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-white">
-                  {t(cat.titleKey)}
-                </h2>
-                <p className="text-primary font-medium mb-4">{t(cat.subtitleKey)}</p>
-                <p className="text-gray-400 leading-relaxed mb-6">
-                  {t(cat.descKey)}
-                </p>
-              </div>
+        <div className="space-y-28">
+          {categoryI18nKeys.map((cat, index) => {
+            const isReversed = index % 2 === 1
 
-              <div className={`grid grid-cols-1 gap-4 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                {cat.features.map((feature, featureIndex) => (
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-80px' }}
+                transition={{ duration: 0.6 }}
+                className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center"
+              >
+                {/* Metin Kısmı */}
+                <div className={isReversed ? 'lg:order-2' : 'lg:order-1'}>
                   <motion.div
-                    key={featureIndex}
-                    initial={{ opacity: 0, x: index % 2 === 1 ? 30 : -30 }}
+                    initial={{ opacity: 0, x: isReversed ? 30 : -30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: featureIndex * 0.1 }}
-                    className="glass rounded-xl p-6 glow-hover"
+                    transition={{ duration: 0.5, delay: 0.2 }}
                   >
-                    <h3 className="text-lg font-semibold text-white mb-2">
-                      {t(feature.titleKey)}
-                    </h3>
-                    <p className="text-gray-400 text-sm">{t(feature.descKey)}</p>
+                    <span className="inline-block text-sm font-semibold text-cyan-400 mb-3 tracking-wider uppercase">
+                      0{index + 1}
+                    </span>
+                    <h2 className="text-3xl md:text-4xl font-heading font-bold mb-3 text-white">
+                      {t(cat.titleKey)}
+                    </h2>
+                    <p className="text-primary font-medium mb-4">{t(cat.subtitleKey)}</p>
+                    <p className="text-gray-400 leading-relaxed text-base">
+                      {t(cat.descKey)}
+                    </p>
                   </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
+                </div>
+
+                {/* Feature Kartları */}
+                <div className={`grid grid-cols-1 gap-4 ${isReversed ? 'lg:order-1' : 'lg:order-2'}`}>
+                  {cat.features.map((feature, featureIndex) => (
+                    <motion.div
+                      key={featureIndex}
+                      initial={{ opacity: 0, x: isReversed ? -20 : 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: 0.3 + featureIndex * 0.1 }}
+                      className="glass rounded-xl p-6 glow-hover border border-white/5 hover:border-cyan-500/20 transition-all"
+                    >
+                      <h3 className="text-lg font-semibold text-white mb-2">
+                        {t(feature.titleKey)}
+                      </h3>
+                      <p className="text-gray-400 text-sm">{t(feature.descKey)}</p>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            )
+          })}
         </div>
       </Section>
     </div>
