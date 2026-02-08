@@ -173,6 +173,23 @@ export const references = [
   },
 ]
 
+export const brands = [
+  {
+    id: 1,
+    name: 'EntreWorld Teknoloji',
+    logo: '/images/entreworld-logo.jpg',
+    category: 'Teknoloji',
+    description: 'EntreWorld ile dijital dönüşüm projeleri gerçekleştirdik.',
+  },
+  {
+    id: 2,
+    name: 'Partner',
+    logo: '/images/logo2.png',
+    category: 'İş Ortağı',
+    description: 'Stratejik iş ortaklığı ile birlikte büyüyoruz.',
+  },
+]
+
 export const team = [
   {
     id: 1,

@@ -16,9 +16,10 @@ import {
   Layout,
   Home,
   User,
+  type LucideIcon,
 } from 'lucide-react'
 
-const iconMap: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
+const iconMap: Record<string, LucideIcon> = {
   globe: Globe,
   smartphone: Smartphone,
   cog: Cog,
