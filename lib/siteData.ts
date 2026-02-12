@@ -3,6 +3,7 @@ export const navLinks = [
   { name: 'Biz Kimiz', href: '/biz-kimiz' },
   { name: 'Nasıl Yapıyoruz', href: '/nasil-yapiyoruz' },
   { name: 'Neler Yapıyoruz', href: '/neler-yapiyoruz' },
+  { name: 'Projelerimiz', href: '/projelerimiz' },
   { name: 'İletişim', href: '/iletisim' },
 ]
 
@@ -187,6 +188,30 @@ export const brands = [
     logo: '/images/logo2.png',
     category: 'İş Ortağı',
     description: 'Stratejik iş ortaklığı ile birlikte büyüyoruz.',
+  },
+]
+
+export const projects = [
+  {
+    id: 1,
+    name: 'Not Ortağım',
+    type: 'Web Platformu',
+    url: 'https://www.notortagim.com',
+    description: 'Öğrenciler için not paylaşımı, PDF yönetimi ve yapay zekâ destekli özetleme platformu.',
+  },
+  {
+    id: 2,
+    name: 'ViviAcademy',
+    type: 'Eğitim Platformu',
+    url: 'https://www.viviacademy.de',
+    description: 'Online eğitim içerikleri, video dersler ve dijital kurslar sunan akademi platformu.',
+  },
+  {
+    id: 3,
+    name: 'King Laminat Sistem',
+    type: 'CRM & Yönetim Paneli',
+    url: 'https://kinglaminaat.company/auth/login?redirect=%2F',
+    description: 'Firma süreçlerini yöneten, müşteri, sipariş ve raporlama modülleri içeren CRM ve yönetim paneli.',
   },
 ]
 

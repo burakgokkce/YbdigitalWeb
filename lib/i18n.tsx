@@ -164,6 +164,75 @@ const translations: Record<Locale, Record<string, string>> = {
     'team.tolga.bio': 'Tolga Bıyık, YB Digital\'in CEO\'su olup yaklaşık 5 yıldır yazılım sektöründe aktif olarak görev almaktadır. Veri bilimi ve yapay zekâ geliştirme alanlarında uzmanlaşmış; şirketin teknoloji vizyonunu yönlendiren, yenilikçi ve sürdürülebilir dijital çözümler üretilmesine liderlik etmektedir.',
     // Company
     'company.description': 'YB Digital olarak dijital dünyada fark yaratan projeler geliştiriyor ve şirketlere yenilikçi çözümler sunuyoruz. 15 kişilik profesyonel ve genç dinamik ekibimizle web sitesi, mobil uygulama, UI/UX tasarım, sosyal medya yönetimi, grafik & video tasarım ve dijital danışmanlık alanlarında yanınızdayız.',
+    // Projects
+    'nav.projects': 'Projelerimiz',
+    'section.projects': 'Projelerimiz',
+    'section.projectsSubtitle': 'Tamamladığımız ve yayınlanan projelerimiz',
+    'projects.tab.web': 'Web Siteleri',
+    'projects.tab.mobile': 'Mobil Uygulamalar',
+    'projects.tab.automation': 'n8n Otomasyonlar',
+    'projects.tab.logo': 'Logo Tasarımları',
+    'projects.visitSite': 'Siteye Git',
+    'projects.completed': 'Tamamlandı',
+    'projects.andMore': 've {count} proje daha',
+    // Web Projects
+    'project.w1.name': 'Not Ortağım',
+    'project.w1.type': 'Web Platformu',
+    'project.w1.desc': 'Öğrenciler için not paylaşımı, PDF yönetimi ve yapay zekâ destekli özetleme platformu.',
+    'project.w2.name': 'ViviAcademy',
+    'project.w2.type': 'Eğitim Platformu',
+    'project.w2.desc': 'Online eğitim içerikleri, video dersler ve dijital kurslar sunan akademi platformu.',
+    'project.w3.name': 'King Laminat Sistem',
+    'project.w3.type': 'CRM & Yönetim Paneli',
+    'project.w3.desc': 'Firma süreçlerini yöneten, müşteri, sipariş ve raporlama modülleri içeren CRM ve yönetim paneli.',
+    'project.w4.name': 'MediTrack Pro',
+    'project.w4.type': 'Sağlık Platformu',
+    'project.w4.desc': 'Hasta takip, randevu yönetimi ve dijital sağlık kayıtları platformu.',
+    'project.w5.name': 'LogiFlow',
+    'project.w5.type': 'Lojistik Yazılımı',
+    'project.w5.desc': 'Kargo takip, rota optimizasyonu ve depo yönetim sistemi.',
+    'project.w6.name': 'EduConnect',
+    'project.w6.type': 'Eğitim Portalı',
+    'project.w6.desc': 'Öğretmen-öğrenci etkileşim portalı, canlı ders ve ödev yönetimi.',
+    // Mobile Projects
+    'project.m1.name': 'ViviAcademy App',
+    'project.m1.type': 'Eğitim Uygulaması',
+    'project.m1.desc': 'ViviAcademy platformunun iOS ve Android mobil uygulaması. Video dersler ve offline erişim.',
+    'project.m2.name': 'Not Ortağım App',
+    'project.m2.type': 'Eğitim Uygulaması',
+    'project.m2.desc': 'Not Ortağım platformunun mobil versiyonu. Not paylaşımı ve AI özetleme cepte.',
+    'project.m3.name': 'FitTracker',
+    'project.m3.type': 'Sağlık & Fitness',
+    'project.m3.desc': 'Günlük egzersiz takibi, kalori sayacı ve kişisel antrenör uygulaması.',
+    // Automation Projects
+    'project.a1.name': 'E-Ticaret Sipariş Otomasyonu',
+    'project.a1.type': 'n8n Otomasyon',
+    'project.a1.desc': 'Sipariş alındığında otomatik fatura, kargo ve müşteri bilgilendirmesi.',
+    'project.a2.name': 'CRM Lead Entegrasyonu',
+    'project.a2.type': 'n8n Otomasyon',
+    'project.a2.desc': 'Form dolduran müşterilerin otomatik CRM kaydı ve e-posta takibi.',
+    'project.a3.name': 'Sosyal Medya Planlayıcı',
+    'project.a3.type': 'n8n Otomasyon',
+    'project.a3.desc': 'İçerik takvimi, otomatik paylaşım ve analiz raporu gönderimi.',
+    'project.a4.name': 'Stok Uyarı Sistemi',
+    'project.a4.type': 'n8n Otomasyon',
+    'project.a4.desc': 'Stok azaldığında otomatik uyarı, tedarikçiye sipariş ve raporlama.',
+    'project.a5.name': 'Müşteri Geri Bildirim Akışı',
+    'project.a5.type': 'n8n Otomasyon',
+    'project.a5.desc': 'Müşteri anket toplama, analiz ve otomatik yanıt sistemi.',
+    // Logo Projects
+    'project.l1.name': 'TechVision Logo',
+    'project.l1.type': 'Logo Tasarımı',
+    'project.l1.desc': 'Teknoloji firması için modern ve minimalist kurumsal logo tasarımı.',
+    'project.l2.name': 'GreenLife Branding',
+    'project.l2.type': 'Logo Tasarımı',
+    'project.l2.desc': 'Organik gıda markası için doğa temalı logo ve kurumsal kimlik.',
+    'project.l3.name': 'SpeedLogistics Logo',
+    'project.l3.type': 'Logo Tasarımı',
+    'project.l3.desc': 'Lojistik firması için dinamik ve profesyonel logo tasarımı.',
+    'project.l4.name': 'AcademyPlus Branding',
+    'project.l4.type': 'Logo Tasarımı',
+    'project.l4.desc': 'Eğitim platformu için güven veren ve modern kurumsal kimlik.',
     // International
     'international.badge': 'Almanya ve Hollanda\'dan firmalarla çalıştık',
     'international.title': 'Uluslararası Deneyim',
@@ -322,6 +391,75 @@ const translations: Record<Locale, Record<string, string>> = {
     'team.tolga.bio': 'Tolga Bıyık is the CEO of YB Digital and has been actively working in the software industry for about 5 years. Specialized in data science and artificial intelligence development, he leads the company\'s technology vision and the creation of innovative and sustainable digital solutions.',
     // Company
     'company.description': 'At YB Digital, we develop projects that make a difference in the digital world and offer innovative solutions to companies. We are by your side with our professional and young dynamic team of 15 in the fields of website, mobile application, UI/UX design, social media management, graphic & video design and digital consulting.',
+    // Projects
+    'nav.projects': 'Our Projects',
+    'section.projects': 'Our Projects',
+    'section.projectsSubtitle': 'Our completed and published projects',
+    'projects.tab.web': 'Websites',
+    'projects.tab.mobile': 'Mobile Apps',
+    'projects.tab.automation': 'n8n Automations',
+    'projects.tab.logo': 'Logo Designs',
+    'projects.visitSite': 'Visit Site',
+    'projects.completed': 'Completed',
+    'projects.andMore': 'and {count} more projects',
+    // Web Projects
+    'project.w1.name': 'Not Ortağım',
+    'project.w1.type': 'Web Platform',
+    'project.w1.desc': 'A note-sharing, PDF management and AI-powered summarization platform for students.',
+    'project.w2.name': 'ViviAcademy',
+    'project.w2.type': 'Education Platform',
+    'project.w2.desc': 'An academy platform offering online educational content, video lessons and digital courses.',
+    'project.w3.name': 'King Laminat Sistem',
+    'project.w3.type': 'CRM & Management Panel',
+    'project.w3.desc': 'A CRM and management panel with customer, order and reporting modules for managing company processes.',
+    'project.w4.name': 'MediTrack Pro',
+    'project.w4.type': 'Health Platform',
+    'project.w4.desc': 'Patient tracking, appointment management and digital health records platform.',
+    'project.w5.name': 'LogiFlow',
+    'project.w5.type': 'Logistics Software',
+    'project.w5.desc': 'Cargo tracking, route optimization and warehouse management system.',
+    'project.w6.name': 'EduConnect',
+    'project.w6.type': 'Education Portal',
+    'project.w6.desc': 'Teacher-student interaction portal, live classes and homework management.',
+    // Mobile Projects
+    'project.m1.name': 'ViviAcademy App',
+    'project.m1.type': 'Education App',
+    'project.m1.desc': 'iOS and Android mobile app of ViviAcademy platform. Video lessons and offline access.',
+    'project.m2.name': 'Not Ortağım App',
+    'project.m2.type': 'Education App',
+    'project.m2.desc': 'Mobile version of Not Ortağım platform. Note sharing and AI summarization on the go.',
+    'project.m3.name': 'FitTracker',
+    'project.m3.type': 'Health & Fitness',
+    'project.m3.desc': 'Daily exercise tracking, calorie counter and personal trainer app.',
+    // Automation Projects
+    'project.a1.name': 'E-Commerce Order Automation',
+    'project.a1.type': 'n8n Automation',
+    'project.a1.desc': 'Automatic invoice, shipping and customer notification when order is placed.',
+    'project.a2.name': 'CRM Lead Integration',
+    'project.a2.type': 'n8n Automation',
+    'project.a2.desc': 'Automatic CRM registration and email follow-up for form submissions.',
+    'project.a3.name': 'Social Media Scheduler',
+    'project.a3.type': 'n8n Automation',
+    'project.a3.desc': 'Content calendar, automatic posting and analytics report delivery.',
+    'project.a4.name': 'Stock Alert System',
+    'project.a4.type': 'n8n Automation',
+    'project.a4.desc': 'Automatic alerts when stock is low, supplier ordering and reporting.',
+    'project.a5.name': 'Customer Feedback Flow',
+    'project.a5.type': 'n8n Automation',
+    'project.a5.desc': 'Customer survey collection, analysis and automatic response system.',
+    // Logo Projects
+    'project.l1.name': 'TechVision Logo',
+    'project.l1.type': 'Logo Design',
+    'project.l1.desc': 'Modern and minimalist corporate logo design for a tech company.',
+    'project.l2.name': 'GreenLife Branding',
+    'project.l2.type': 'Logo Design',
+    'project.l2.desc': 'Nature-themed logo and corporate identity for an organic food brand.',
+    'project.l3.name': 'SpeedLogistics Logo',
+    'project.l3.type': 'Logo Design',
+    'project.l3.desc': 'Dynamic and professional logo design for a logistics company.',
+    'project.l4.name': 'AcademyPlus Branding',
+    'project.l4.type': 'Logo Design',
+    'project.l4.desc': 'Trustworthy and modern corporate identity for an education platform.',
     // International
     'international.badge': 'We\'ve worked with companies from Germany and the Netherlands',
     'international.title': 'International Experience',
@@ -335,6 +473,7 @@ export const navTranslationKeys: Record<string, string> = {
   '/biz-kimiz': 'nav.about',
   '/nasil-yapiyoruz': 'nav.how',
   '/neler-yapiyoruz': 'nav.what',
+  '/projelerimiz': 'nav.projects',
   '/iletisim': 'nav.contact',
 }
 
@@ -407,6 +546,45 @@ export const categoryI18nKeys = [
     ],
   },
 ]
+
+// Project i18n keys by category
+// Web: 6 gösterilen kart + 15 extra
+export const webProjectKeys = [
+  { nameKey: 'project.w1.name', typeKey: 'project.w1.type', descKey: 'project.w1.desc', url: 'https://www.notortagim.com' },
+  { nameKey: 'project.w2.name', typeKey: 'project.w2.type', descKey: 'project.w2.desc', url: 'https://www.viviacademy.de' },
+  { nameKey: 'project.w3.name', typeKey: 'project.w3.type', descKey: 'project.w3.desc', url: 'https://kinglaminaat.company/auth/login?redirect=%2F' },
+  { nameKey: 'project.w4.name', typeKey: 'project.w4.type', descKey: 'project.w4.desc', url: null },
+  { nameKey: 'project.w5.name', typeKey: 'project.w5.type', descKey: 'project.w5.desc', url: null },
+  { nameKey: 'project.w6.name', typeKey: 'project.w6.type', descKey: 'project.w6.desc', url: null },
+]
+export const webExtraCount = 15
+
+// Mobil: 3 kart
+export const mobileProjectKeys = [
+  { nameKey: 'project.m1.name', typeKey: 'project.m1.type', descKey: 'project.m1.desc', url: null },
+  { nameKey: 'project.m2.name', typeKey: 'project.m2.type', descKey: 'project.m2.desc', url: null },
+  { nameKey: 'project.m3.name', typeKey: 'project.m3.type', descKey: 'project.m3.desc', url: null },
+]
+
+// Otomasyon: 5 kart
+export const automationProjectKeys = [
+  { nameKey: 'project.a1.name', typeKey: 'project.a1.type', descKey: 'project.a1.desc', url: null },
+  { nameKey: 'project.a2.name', typeKey: 'project.a2.type', descKey: 'project.a2.desc', url: null },
+  { nameKey: 'project.a3.name', typeKey: 'project.a3.type', descKey: 'project.a3.desc', url: null },
+  { nameKey: 'project.a4.name', typeKey: 'project.a4.type', descKey: 'project.a4.desc', url: null },
+  { nameKey: 'project.a5.name', typeKey: 'project.a5.type', descKey: 'project.a5.desc', url: null },
+]
+
+// Logo: 4 kart
+export const logoProjectKeys = [
+  { nameKey: 'project.l1.name', typeKey: 'project.l1.type', descKey: 'project.l1.desc', url: null },
+  { nameKey: 'project.l2.name', typeKey: 'project.l2.type', descKey: 'project.l2.desc', url: null },
+  { nameKey: 'project.l3.name', typeKey: 'project.l3.type', descKey: 'project.l3.desc', url: null },
+  { nameKey: 'project.l4.name', typeKey: 'project.l4.type', descKey: 'project.l4.desc', url: null },
+]
+
+// Legacy alias
+export const projectI18nKeys = webProjectKeys
 
 // Team i18n keys
 export const teamI18nKeys = [
